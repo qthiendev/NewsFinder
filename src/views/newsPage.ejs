@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Finder</title>
+    <link rel="stylesheet" href="/css/newsPage.css">
+</head>
+
+<body>
+    <h1><a href="/" style="text-decoration: none; color: blue;">News Finder</a></h1>
+    <div class="container">
+    
+        <div class="search-box">
+            <form action="/find" method="GET">
+                <input type="text" name="subtitle" placeholder="Find news..." required>
+                <button type="submit">Find</button>
+            </form>
+            <p>Datetime: <%= currentTime %></p>
+            <p>Total Execute Time: <%= executionTime %> milliseconds</p>
+        </div>
+    
+        <div class="news-item">
+            <strong><%= data.news_id %>. <%= data.news_title %>.</strong>
+            <p></p>
+            <small><%= data.news_short_description %></small>
+            <p></p>
+            <p><%= data.news_description %></p>
+        </div>
+    </div>
+    
+</body>
+
+</html>

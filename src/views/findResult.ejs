@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Finder - Results</title>
+    <link rel="stylesheet" href="/css/findResult.css"> <!-- Link to findResult.css -->
+</head>
+
+<body>
+    <div class="search-box">
+        <h1><a href="/" style="text-decoration: none; color: blue;">News Finder</a></h1>
+        <div class="search-form">
+            <form action="/find" method="GET">
+                <input type="text" name="subtitle" placeholder="Find news..." required>
+                <button type="submit">Find</button>
+            </form>
+        </div>
+        <p id="find-time" class="find-time">
+        <p>Datetime: <%= currentTime %>
+        </p>
+        <p>Total Execute Time: <%= executionTime %> milliseconds</p>
+        </p> <!-- Display the find time and execution time -->
+    </div>
+
+    <div class="news-container">
+        <% if (data && data.length> 0) { %>
+            <% data.forEach(item=> { %>
+                <a href="/news?id=<%= item.news_id %>" class="news-item" style="text-decoration: none; color: inherit;">
+                    <div>
+                        <strong>
+                            <%= item.news_id %>. <%= item.news_title %>
+                        </strong>
+                        <div>
+                            <small>
+                                <%= item.news_short_description %>
+                            </small>
+                        </div>
+                    </div>
+                </a>
+                <% }) %>
+                    <% } else { %>
+                        <p>No results found for the given search.</p>
+                        <% } %>
+    </div>
+</body>
+
+</html>

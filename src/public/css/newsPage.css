@@ -1,0 +1,100 @@
+body {
+    font-family: 'Georgia', serif; /* Classic newspaper font */
+    background-color: #f0f0f0; /* Light gray background */
+    color: #333;
+    margin: 0;
+    padding: 20px; /* Add padding around the body */
+}
+
+.container {
+    max-width: 800px; /* Limit the width for easier reading */
+    margin: 0 auto; /* Center the container */
+    padding: 0 20px; /* Add left and right padding */
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em; /* Larger headline */
+    margin: 20px 0; /* Space above and below */
+    color: #444; /* Darker color for the headline */
+    border-bottom: 2px solid #007BFF; /* Underline for emphasis */
+    padding-bottom: 10px; /* Space between text and underline */
+}
+
+.search-box {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.search-box input[type="text"] {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 300px; /* Adjusted width for better visibility */
+}
+
+.search-box button {
+    padding: 10px 15px;
+    font-size: 1em;
+    border: none;
+    border-radius: 4px;
+    background-color: #007BFF; /* Blue color for the button */
+    color: white;
+    cursor: pointer;
+    margin-left: 5px; /* Space between input and button */
+    transition: background-color 0.3s; /* Smooth transition on hover */
+}
+
+.search-box button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.news-item {
+    margin: 30px 0; /* Space between each news item */
+    border-bottom: 1px solid #ddd; /* Divider line between news items */
+    padding-bottom: 20px; /* Space below the news item */
+}
+
+.news-item:last-child {
+    border-bottom: none; /* Remove border from the last item */
+}
+
+.news-item strong {
+    display: block;
+    font-size: 1.8em; /* Larger font for the title */
+    color: #222; /* Darker color for the title */
+    margin-bottom: 5px; /* Space below the title */
+}
+
+.news-item small {
+    display: block;
+    font-size: 1em; /* Small font for short description */
+    color: #666; /* Gray color for the short description */
+    font-style: italic; /* Italic style */
+    margin-bottom: 10px; /* Space below the short description */
+}
+
+.news-item p {
+    margin-top: 10px; /* Space above the description */
+    font-size: 1.1em; /* Normal font size for the full description */
+    line-height: 1.6; /* Line height for readability */
+    color: #444; /* Darker color for readability */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .search-box input[type="text"],
+    .search-box button {
+        width: 90%; /* Make input and button wider on small screens */
+        margin: 10px 0; /* Margin on top and bottom */
+    }
+
+    h1 {
+        font-size: 2em; /* Adjust headline size for smaller screens */
+    }
+
+    .news-item strong {
+        font-size: 1.5em; /* Adjust title size for smaller screens */
+    }
+}
