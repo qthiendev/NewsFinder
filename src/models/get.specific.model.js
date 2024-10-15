@@ -9,7 +9,6 @@ const tryGetSpecific = async (subtitle) => {
         const data = await ndb.query('EXECUTE Find @subtitle', { subtitle });
 
         return data;
-
     } catch (err) {
         throw new Error(`get.specific.model.js/tryGetSpecific | ${err.message}`);
     }

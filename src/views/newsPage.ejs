@@ -14,12 +14,12 @@
     
         <div class="search-box">
             <form action="/find" method="GET">
-                <input type="text" name="subtitle" placeholder="Find news..." required>
+                <input type="text" name="subtitle" placeholder="Find news..." value="<%= subtitle %>" required>
                 <button type="submit">Find</button>
             </form>
             <p>Datetime: <%= currentTime %></p>
             <p>Total Execute Time: <%= executionTime %> milliseconds</p>
-        </div>
+        </div>        
     
         <div class="news-item">
             <strong><%= data.news_id %>. <%= data.news_title %>.</strong>
